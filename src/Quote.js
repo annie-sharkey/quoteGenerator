@@ -4,6 +4,8 @@ import styled, { keyframes } from 'styled-components';
 import { fadeIn } from 'react-animations';
 import Typing from 'react-typing-animation';
 
+//Consider moving quotes into its own file and importing it to Quote.js
+
 const quotes = [
     {
         quote: "All your life you wait, and then it finally comes, and are you ready?",
@@ -100,6 +102,14 @@ class Quote extends React.Component {
     }
 
     render() {
+        /*
+        If you prefer how this looks you can pull out props like this in render:
+        
+       const {handleGenerate, number } = this.props
+        
+        And then access these variables as handleGenerate and number in your return if
+        you prefer how that looks. 
+        */
         return (
             <div class="page">
 
@@ -129,7 +139,7 @@ class Quote extends React.Component {
                 </div>
 
                 <br></br>
-
+{//If you want to insert space after your component, do this using margin.}
                 <div>
                     <br></br>
                     <br></br>
